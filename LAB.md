@@ -83,8 +83,8 @@ Any holes in the array should be skipped (don't call the callback function).
 Returns the `true` if every item in the array has returned `true`, otherwise `false`.
 
 ## Rubric **10pts**
-* Each test: *1pt*
-* Each function: *1pt*
+* Each test: *1pt* (x 5 = 5pts)
+* Each function: *1pt* (x 5 = 5pts)
 
 ### ADVANCED: Array Holes
 
