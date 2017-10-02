@@ -1,0 +1,30 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "eslint": "^4.8.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.3"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "npm run test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaNish808/array-methods.git"
+  },
+  "author": "David Nishikawa <triptype@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaNish808/array-methods/issues"
+  },
+  "homepage": "https://github.com/DaNish808/array-methods#readme"
+}
