@@ -44,4 +44,11 @@ describe('array methods', () => {
         assert.deepEqual(result, [2, 3, 4]);
     });
 
+    it('findIndex', () => {
+        let array = ['burd', 'slyme', 'goku'];
+        let isGoku = arrayElement => arrayElement === 'goku';
+        let result = findIndex(array, isGoku);
+        assert.deepEqual(result, 2);
+    });
+
 });
