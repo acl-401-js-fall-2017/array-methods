@@ -9,6 +9,7 @@ const createsFilteredArr = ( item, index ) => {
 it( 'filter', () => {
     const initArr = [ 'sammy', 'sosa', 'sings', 'silly', 'songs' ];
     const filteredArr = filter( initArr, createsFilteredArr );
+    // const filteredArr = filter( initArr, (item) =>  item > 4 );
 
     assert.deepEqual( filteredArr, [ 'sammy', 'sings', 'silly', 'songs' ] );
 });
