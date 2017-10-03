@@ -23,10 +23,10 @@ describe.only('array methods', () => {
     });
     
     it('filter', () => {
-        const array = [];
+        const array = [1,11, 2, 98];
         const filtered = filter(array, (item) => {
-            return item(isNaN);
+            return item ;
         });
-
+        assert.equal(filtered, [1,2]);
     });
 });
