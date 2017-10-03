@@ -17,7 +17,7 @@ describe('array methods', () => {
     });
 
     it('every', () => {
-        let array = [1, 2, 3];
+        let array = [1, 2, , 3];
         let moreThanZero = a => a > 0;
         let result = every(array, moreThanZero);
         assert.equal(result, true);
