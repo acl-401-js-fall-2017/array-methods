@@ -4,7 +4,8 @@
   "description": "",
   "main": "arrayTests.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha", 
+    "start": "npm run test -- -w"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/ChristinaMills/array-methods#readme",
   "devDependencies": {
+    "eslint": "^4.8.0",
     "mocha": "^4.0.0"
   }
 }
