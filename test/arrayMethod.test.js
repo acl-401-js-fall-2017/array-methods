@@ -4,6 +4,7 @@ const map = require('../lib/map');
 const filter = require('../lib/filter');
 const findIndex = require('../lib/findIndex');
 const every = require('../lib/every');
+const reduce = require('../lib/reduce');
 
 
 describe('array methods', () => {
@@ -63,7 +64,15 @@ describe('array methods', () => {
             return num > 100;
         });
         assert.deepEqual(everyArray, false);
-    })
+    });
+
+    // it.only('reduce', () => {
+    //     let array = [10, 14, 18];
+    //     let reduceArray = reduce(array, (total, initialValue) => {
+    //         return total + initialValue;
+    //     });
+    //     assert.deepEqual(reduceArray, 42);
+    // })
 
 });
 
