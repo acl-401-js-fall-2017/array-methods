@@ -32,7 +32,7 @@ describe('array methods', () => {
         assert.equal(result, true);
     });
 
-    it('reduce - basic addition with array holes', () => {
+    it('reduce - basic addition with array holes and no initialValue', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
         let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
