@@ -49,13 +49,21 @@ describe('array methods', () => {
         assert.deepEqual(findIndexNum, -1);
     });
 
-    it('every', () => {
+    it('everyIfTrue', () => {
         let array = [5, 6, 7];
         let everyArray = every(array, (num, index) => {
             return num > 0;
         });
-        assert.deepEqual(everyArray, [5, 6, 7]);
+        assert.deepEqual(everyArray, true);
     });
+
+    it('everyIfFalse', () => {
+        let array = [5, 6, 7];
+        let everyArray = every(array, (num, index) => {
+            return num > 100;
+        });
+        assert.deepEqual(everyArray, false);
+    })
 
 });
 
