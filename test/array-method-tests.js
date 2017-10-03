@@ -26,4 +26,15 @@ describe ('filter', function() {
     });
 });
 
+describe ('reduce', function() {
+    const testArray = [4, 2, 7, 9];
+    it('should return the accumulator value ', function(){
+        let accum =  arrayMethods.reduce(testArray,(accumulator, value) => {
+            return accumulator + value;
+        });
+
+        assert.deepEqual(accum,22);
+    });
+});
+
 
