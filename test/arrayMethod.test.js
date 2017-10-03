@@ -3,9 +3,11 @@ const forEach = require('../lib/forEach');
 const map = require('../lib/map');
 const filter = require('../lib/filter');
 const findIndex = require('../lib/findIndex');
+const every = require('../lib/every');
 
 
 describe('array methods', () => {
+
     it('forEach', () => {
         const array = ['a', 'b', 'c'];
         let called = '';
@@ -31,13 +33,28 @@ describe('array methods', () => {
         assert.deepEqual(filterArray, [2, 8]);
     });
 
-    it.only('findIndex', () => {  //array.findIndex(function(currentValue, index, arr), thisValue)
-        const array = [3, 7, 11];
-        const findIndexNum = findIndex(array, (num, index) => {
+    it('findIndex', () => {  
+        let array = [3, 7, 11];
+        let findIndexNum = findIndex(array, (num, index) => {
             return num === 11;
         });
         assert.deepEqual(findIndexNum, 2);
+    });
 
+    it('findIndexIfNotInArray', () => {
+        let array = [0, 5, 121];
+        let findIndexNum = findIndex(array, (num, index) => {
+            return num === 13;
+        });
+        assert.deepEqual(findIndexNum, -1);
+    });
+
+    it('every', () => {
+        let array = [5, 6, 7];
+        let everyArray = every(array, (num, index) => {
+            return num > 0;
+        });
+        assert.deepEqual(everyArray, [5, 6, 7]);
     });
 
 });
