@@ -4,6 +4,7 @@ const every = require('../lib/every');
 const reduce = require('../lib/reduce');
 const filter = require('../lib/filter');
 const map = require('../lib/map');
+const findIndex = require('../lib/findIndex');
 
 describe('array methods', () => {
     it('forEach', () => {
@@ -45,10 +46,10 @@ describe('array methods', () => {
     });
 
     it('findIndex', () => {
-        let array = ['burd', 'slyme', 'goku'];
+        let array = ['burd', 'goku', 'slyme', 'goku'];
         let isGoku = arrayElement => arrayElement === 'goku';
         let result = findIndex(array, isGoku);
-        assert.deepEqual(result, 2);
+        assert.deepEqual(result, 1);
     });
 
 });
