@@ -1,0 +1,22 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mugworks/array-methods.git"
+  },
+  "author": "Michele Greenwood <mugreenwood.pdx@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mugworks/array-methods/issues"
+  },
+  "homepage": "https://github.com/mugworks/array-methods#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  }
+}
