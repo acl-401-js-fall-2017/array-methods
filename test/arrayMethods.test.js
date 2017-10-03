@@ -24,7 +24,7 @@ describe('array methods', () => {
     });
 
     it('reduce', () => {
-        let array = [1, 2, 3];
+        let array = [1, 2, , 3];
         let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
         let initialValue = 1;
         let result = reduce(array, addToAccumulator, initialValue);
