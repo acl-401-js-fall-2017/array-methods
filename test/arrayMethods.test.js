@@ -2,15 +2,7 @@ const assert = require('assert');
 const forEach = require('../lib/forEach');
 const every = require('../lib/every');
 const reduce = require('../lib/reduce');
-
-
-function filter(array, callback){
-    let newArray = [];
-    for (let i = 0; i < array.length; i++){
-        if (callback(array[i])) newArray.push(array[i]);
-    }
-    return newArray;
-}
+const filter = require('../lib/filter');
 
 describe('array methods', () => {
     it('forEach', () => {
