@@ -3,7 +3,7 @@ const forEach = require('../lib/foreach');
 const map = require('../lib/map');
 const filter = require('../lib/filter');
 const reduce = require('../lib/reduce');
-
+const findIndex = require('../lib/findIndex');
 
 
 
@@ -38,5 +38,13 @@ describe('array methods', () => {
             var result = sum + value;
             return result;
         },0),6);
+    });
+
+    it('findIndex', () => {
+        const arr = [1,3,3,3,6,7,8,99,3];
+        assert.deepEqual(findIndex(arr, function isEven(item){
+            var remainder = item % 2;
+            return remainder === 0;
+        }),4);
     });
 });
