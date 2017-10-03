@@ -20,7 +20,7 @@ describe('array methods', () => {
     it('every', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
-        let moreThanZero = a => a > 0;
+        let moreThanZero = arrayElement => arrayElement > 0;
         let result = every(array, moreThanZero);
         assert.equal(result, true);
     });
@@ -45,10 +45,10 @@ describe('array methods', () => {
     it('map', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
-        let plusOne = arrayElement => arrayElement + 1;
+        let plusOne = (arrayElement, index) => (arrayElement + 1) + String(index);
         let result = map(array, plusOne);
         // eslint-disable-next-line
-        assert.deepEqual(result, [2, 3, , 4]);
+        assert.deepEqual(result, ['20', '31', , '43']);
     });
 
     it('findIndex', () => {
