@@ -18,4 +18,5 @@ describe('array methods', () => {
         let results = every(array, moreThanZero);
         assert.equal(results, true);
     });
+
 });
