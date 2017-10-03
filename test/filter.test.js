@@ -2,8 +2,8 @@ const assert = require( 'assert' );
 const filter = require( '../lib/filter' );
 
 // test filter array
-const createsFilteredArr = ( item, index ) => {
-    return item
+const createsFilteredArr = ( item) => {
+    return item;
 };
 
 it( 'filter', () => {

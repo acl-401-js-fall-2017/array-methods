@@ -9,6 +9,8 @@
     "mocha": "^3.5.3"
   },
   "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
     "test": "mocha",
     "start": "npm run test -- -w"
   },

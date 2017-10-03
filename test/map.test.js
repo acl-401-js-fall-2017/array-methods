@@ -3,7 +3,7 @@ const map = require( '../lib/map' );
 
 // test map array
 const createsNewArr = ( ele, index ) => {
-    return index
+    return index;
 };
 
 it( 'map', () => {
