@@ -1,11 +1,12 @@
 const assert = require('assert');
+const filter = require('../lib/filter'); //eslint-disable-line
 
-describe('filter function', () => {
-    it('those of an array greater than 5', () => {
-        const array = [2, 4, 6, 8, 10];
-        const filterArray = filter(array, (int) => {
-            if (int > 5) return int; 
+describe('filter function', function () {
+    it('should return an array of integers less than 3', () => {
+        let array = [5, 4, 3, 2, 1];
+        let filterArray = array.filter( function (index) {
+            return index < 3;
         });
-        assert.deepEqual(filterArray, [6, 8, 10]);
+        assert.deepEqual(filterArray, [2, 1]);
     });
 });
