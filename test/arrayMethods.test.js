@@ -33,7 +33,14 @@ describe('array methods', () => {
         let array = [1, 2, 3, 4];
         let isOdd = arrayElement => arrayElement%2 != 0;
         let result = filter(array, isOdd);
-        assert.deepEqual(result, [1,3]);
+        assert.deepEqual(result, [1, 3]);
+    });
+
+    it('map', () => {
+        let array = [1, 2, 3];
+        let plusOne = arrayElement => arrayElement + 1;
+        let result = map(array, plusOne);
+        assert.deepEqual(result, [2, 3, 4]);
     });
 
 });
