@@ -25,8 +25,9 @@ describe.only('array methods', () => {
     it('filter', () => {
         const array = [1,11, 2, 98];
         const filtered = filter(array, (item) => {
-            return item ;
+            return item <= 10;
         });
-        assert.equal(filtered, [1,2]);
+        assert.deepEqual(filtered, [1,2]);
     });
+
 });
