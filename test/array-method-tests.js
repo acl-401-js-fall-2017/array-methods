@@ -44,6 +44,23 @@ describe ('reduce', function() {
         assert.deepEqual(accum,42);
     });
     
+
+    describe ('findIndex', function() {
+        const testArray = ['a','b','c','d'];
+        it('should return index of the first instance of given item in the array', function(){
+            let indexOfC = arrayMethods.findIndex(testArray, (value, index) => {
+                return value === 'c' ;
+            });
+            let indexOfG = arrayMethods.findIndex(testArray, (value, index) => {
+                return value === 'g';
+            });
+    
+            assert.equal(indexOfC,2);
+            assert.equal(indexOfG,-1);
+        });
+    });
+    
+    
 });
 
 
