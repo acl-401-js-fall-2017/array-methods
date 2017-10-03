@@ -29,16 +29,16 @@ describe('array methods', () => {
             return num % 2 === 0;
         });
         assert.deepEqual(filterArray, [2, 8]);
-    })
+    });
 
     it.only('findIndex', () => {  //array.findIndex(function(currentValue, index, arr), thisValue)
         const array = [3, 7, 11];
         const findIndexNum = findIndex(array, (num, index) => {
             return num === 11;
-        })
+        });
         assert.deepEqual(findIndexNum, 2);
 
-    })
+    });
 
 });
 
