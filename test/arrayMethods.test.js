@@ -22,7 +22,8 @@ describe('array methods', () => {
 
     it('reduce', () =>{
         let array = [1, 2, 3];
-        let result = reduce(array);
+        let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
+        let result = reduce(array, addToAccumulator);
         assert.equal(result, 6);
     });
 });
