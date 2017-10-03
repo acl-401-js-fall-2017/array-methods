@@ -60,6 +60,24 @@ describe ('reduce', function() {
         });
     });
     
+
+    describe ('every', function() {
+        const testArray = ['a','b','c','d'];
+        it('should return true if all items pass the test', function(){
+            let allLetters = arrayMethods.every(testArray, (value) => {
+                let isString = typeof value === 'string'  ;
+                let isSingle = value.length === 1;
+                return (isString || isSingle);
+            });
+            let allNumbers = arrayMethods.every(testArray, (value) => {
+                let isNumber = typeof value === 'number'  ;
+                return (isNumber);
+            });
+    
+            assert.equal(allLetters,true);
+            assert.equal(allNumbers,false);
+        });
+    });
     
 });
 
