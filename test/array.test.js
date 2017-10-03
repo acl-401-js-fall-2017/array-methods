@@ -2,6 +2,9 @@ const assert = require('assert');
 const forEach = require('../lib/foreach');
 const map = require('../lib/map');
 const filter = require('../lib/filter');
+const reduce = require('../lib/reduce');
+
+
 
 
 describe('array methods', () => {
@@ -27,5 +30,13 @@ describe('array methods', () => {
             var remainder = num % 2;  
             return remainder === 0;
         }),[2]);
+    });
+
+    it('reduce', () => {
+        const arr = [1,2,3];
+        assert.deepEqual(reduce(arr, function add(sum, value){
+            var result = sum + value;
+            return result;
+        },0),6);
     });
 });
