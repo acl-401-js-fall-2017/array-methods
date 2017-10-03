@@ -4,6 +4,7 @@ const map = require('../lib/map');
 const filter = require('../lib/filter');
 const reduce = require('../lib/reduce');
 const findIndex = require('../lib/findIndex');
+const every = require('../lib/every');
 
 
 
@@ -46,5 +47,13 @@ describe('array methods', () => {
             var remainder = item % 2;
             return remainder === 0;
         }),4);
+    });
+
+    it('every', () => {
+        const arr = [1,3,3,3,6,7,8,99,3];
+        assert.deepEqual(every(arr, function isEven(item){
+            var remainder = item % 2;
+            return remainder === 0;
+        }),false);
     });
 });
