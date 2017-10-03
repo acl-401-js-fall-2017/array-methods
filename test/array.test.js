@@ -1,6 +1,7 @@
 const assert = require('assert');
 const forEach = require('../lib/foreach');
 const map = require('../lib/map');
+const filter = require('../lib/filter');
 
 
 describe('array methods', () => {
@@ -18,5 +19,13 @@ describe('array methods', () => {
         assert.deepEqual(map(arr, (num) => {
             return num * num;
         }),[1,4,9]);
+    });
+
+    it('filter', () => {
+        const arr = [1,2,3];
+        assert.deepEqual(filter(arr, function isEven(num){
+            var remainder = num % 2;  
+            return remainder === 0;
+        }),[2]);
     });
 });
