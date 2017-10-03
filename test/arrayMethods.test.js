@@ -17,10 +17,18 @@ describe('array methods', () => {
         assert.equal(called, 'a0b1c3');
     });
 
-    it('every', () => {
+    it('every - passing index into callback', () => {
         let array = [0, 1, 2, 3];
         let isEqualToIndex = (arrayElement, index) => arrayElement === index;
         let result = every(array, isEqualToIndex);
+        assert.equal(result, true);
+    });
+
+    it('every - array holes', () => {
+        // eslint-disable-next-line
+        let array = [1, 2, , 3];
+        let greaterThanZero = (arrayElement) => arrayElement > 0;
+        let result = every(array, greaterThanZero);
         assert.equal(result, true);
     });
 
@@ -55,7 +63,7 @@ describe('array methods', () => {
         let array = ['burd', , 'goku', 'slyme', 'goku'];
         let isGoku = arrayElement => arrayElement === 'goku';
         let result = findIndex(array, isGoku);
-        assert.deepEqual(result, 2);
+        assert.equal(result, 2);
     });
 
 });
