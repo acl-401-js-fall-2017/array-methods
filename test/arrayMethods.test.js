@@ -18,10 +18,9 @@ describe('array methods', () => {
     });
 
     it('every', () => {
-        // eslint-disable-next-line
-        let array = [1, 2, , 3];
-        let moreThanZero = arrayElement => arrayElement > 0;
-        let result = every(array, moreThanZero);
+        let array = [0, 1, 2, 3];
+        let isEqualToIndex = (arrayElement, index) => arrayElement === index;
+        let result = every(array, isEqualToIndex);
         assert.equal(result, true);
     });
 
