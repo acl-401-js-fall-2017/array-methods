@@ -32,7 +32,7 @@ describe('array methods', () => {
     });
 
     it('filter', () => {
-        let array = [1, 2, 3, 4];
+        let array = [1, 2, 3,, 4];
         let isOdd = arrayElement => arrayElement%2 != 0;
         let result = filter(array, isOdd);
         assert.deepEqual(result, [1, 3]);
