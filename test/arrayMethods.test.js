@@ -45,10 +45,10 @@ describe('array methods', () => {
     it('map', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
-        let plusOne = (arrayElement, index) => (arrayElement + 1) + String(index);
+        let plusOne = (arrayElement, index) => (arrayElement + 1) + '-' + index;
         let result = map(array, plusOne);
         // eslint-disable-next-line
-        assert.deepEqual(result, ['20', '31', , '43']);
+        assert.deepEqual(result, ['2-0', '3-1', , '4-3']);
     });
 
     it('findIndex', () => {
