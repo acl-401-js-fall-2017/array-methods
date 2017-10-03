@@ -28,7 +28,7 @@ describe('array methods', () => {
         let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
         let initialValue = 1;
         let result = reduce(array, addToAccumulator, initialValue);
-        assert.equal(result, 5);
+        assert.equal(result, 7);
     });
 
     it('filter', () => {
