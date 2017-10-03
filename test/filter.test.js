@@ -9,6 +9,6 @@ describe('filter function', () => {
         const finalArray = filter(initialArray, (num, index) => {
             return !(num % 2);
         });
-        assert.deepEqual(finalArray, [2, 4]);
+        assert.deepEqual(finalArray, [2, , 4]);
     });
 });
