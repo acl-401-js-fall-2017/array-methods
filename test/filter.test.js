@@ -3,6 +3,7 @@ const filter = require('../lib/filter');
 
 
 describe('new filtered array', () => {
+    
     const testFilterArray = [1,2,3];
     const greaterThanArray = filter(testFilterArray, (item) => item > 1);
 
