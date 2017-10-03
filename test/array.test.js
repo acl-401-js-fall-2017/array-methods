@@ -2,6 +2,8 @@ const assert = require('assert');
 const forEach = require('../lib/forEach');
 const map = require('../lib/map');
 const filter = require('../lib/filter');
+const every = require('../lib/every');
+const findIndex = require('../lib/findIndex');
 
 describe.only('array methods', () => {
 
@@ -28,6 +30,22 @@ describe.only('array methods', () => {
             return item <= 10;
         });
         assert.deepEqual(filtered, [1,2]);
+    });
+
+    it('findIndex', () => {
+        const array = [1, 11, 2, 98];
+        const finder = findIndex(array, (item) => {
+            return item >= 10;
+        });
+        assert.deepEqual(finder, 1);
+    });
+
+    it.skip('every', () => {
+        const array = [1, 11, 2, 98];
+        const filtered = every(array, (item) => {
+            return item <= 10;
+        });
+        assert.deepEqual(filtered, [1, 2]);
     });
 
 });
