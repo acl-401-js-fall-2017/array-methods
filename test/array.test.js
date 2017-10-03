@@ -1,9 +1,10 @@
 const assert = require('assert');
 const forEach = require('../lib/forEach');
 const map = require('../lib/map');
-
+const filter = require('../lib/filter');
 
 describe.only('array methods', () => {
+
     it('forEach', () => {
         const array = ['a', 'b', 'c'];
         let called = '';
@@ -12,12 +13,20 @@ describe.only('array methods', () => {
         });
         assert.equal(called, 'a0b1c2');
     });
-    it.skip('map', () => {
+
+    it('map', () => {
         const array = [ 1, 2, 4];
-        let called = '';
-        map(array, (item, index) => { 
-            called += item;
+        const mapped = map(array, (item) => { 
+            return  item*2;
         });
-        assert.equal(called, '[2,4,8]');
+        assert.deepEqual(mapped, [2,4,8]);
+    });
+    
+    it('filter', () => {
+        const array = [];
+        const filtered = filter(array, (item) => {
+            return item(isNaN);
+        });
+
     });
 });
