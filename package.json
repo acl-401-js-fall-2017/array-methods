@@ -4,6 +4,8 @@
   "description": "Array Methods using TDD!",
   "main": "index.js",
   "scripts": {
+    "lint": "lint",
+    "pretest": "eslint .",
     "test": "mocha",
     "start": "npm run test -- -w"
   },
