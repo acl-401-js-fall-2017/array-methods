@@ -75,12 +75,20 @@ describe('array methods', () => {
         assert.deepEqual(result, ["HOW", "ARE", "YOU", "TODAY"]);
     });
 
-    it('findIndex', () => {
+    it('findIndex - array holes', () => {
         // eslint-disable-next-line
         let array = ['burd', , 'goku', 'slyme', 'goku'];
         let isGoku = arrayElement => arrayElement === 'goku';
         let result = findIndex(array, isGoku);
         assert.equal(result, 2);
+    });
+
+    it('findIndex - passing index into callback', () => {
+        // eslint-disable-next-line
+        let array = ['burd', , 'goku', 3, 'goku'];
+        let matchIndexNumber = (arrayElement, index) => arrayElement === index;
+        let result = findIndex(array, matchIndexNumber);
+        assert.equal(result, 3);
     });
 
 });
