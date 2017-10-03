@@ -3,6 +3,7 @@ const forEach = require('../lib/forEach');
 const every = require('../lib/every');
 const reduce = require('../lib/reduce');
 const filter = require('../lib/filter');
+const map = require('../lib/map');
 
 describe('array methods', () => {
     it('forEach', () => {
