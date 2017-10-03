@@ -32,13 +32,25 @@ describe('array methods', () => {
         assert.equal(result, true);
     });
 
-    it('reduce', () => {
+    it('reduce - basic addition with array holes', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
         let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
         let initialValue = 1;
         let result = reduce(array, addToAccumulator, initialValue);
         assert.equal(result, 7);
+    });
+
+    it('reduce - tally', () => {
+        // eslint-disable-next-line
+        let array = ['dog', 'dog', 'dog', 'wolf' ];
+        let addToAccumulator = function(accumulator, arrayElement) {
+            accumulator[arrayElement] = (accumulator[arrayElement] || 0) + 1 ;
+            return accumulator;
+        };
+        let initialValue = {};
+        let result = reduce(array, addToAccumulator, initialValue);
+        assert.deepEqual(result, {dog: 3, wolf: 1} );
     });
 
     it('filter - array holes', () => {
