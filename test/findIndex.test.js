@@ -24,4 +24,6 @@ describe('findIndex', () => {
             return ele === 'e';
         }), 4)
     })
+
+    
 });
