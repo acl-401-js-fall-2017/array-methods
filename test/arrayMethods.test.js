@@ -1,6 +1,7 @@
 const assert = require('assert');
 const forEach = require('../lib/forEach');
 const every = require('../lib/every');
+const reduce = require('../lib/reduce');
 
 describe('array methods', () => {
     it('forEach', () => {
@@ -15,8 +16,13 @@ describe('array methods', () => {
     it('every', () => {
         let array = [1, 2, 3];
         let moreThanZero = a => a > 0;
-        let results = every(array, moreThanZero);
-        assert.equal(results, true);
+        let result = every(array, moreThanZero);
+        assert.equal(result, true);
     });
 
+    it('reduce', () =>{
+        let array = [1, 2, 3];
+        let result = reduce(array);
+        assert.equal(result, 6);
+    });
 });
