@@ -57,13 +57,22 @@ describe('array methods', () => {
         assert.deepEqual(result, [0, 2, 4]);
     });
 
-    it('map', () => {
+    it('map - array holes and index passed into callback', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
         let plusOne = (arrayElement, index) => (arrayElement + 1) + '-' + index;
         let result = map(array, plusOne);
         // eslint-disable-next-line
         assert.deepEqual(result, ['2-0', '3-1', , '4-3']);
+    });
+
+    it('map - basic string manipulation', () => {
+        // eslint-disable-next-line
+        let array = ['how', 'are', 'you', 'today'];
+        let allCaps = arrayElement => arrayElement.toUpperCase();
+        let result = map(array, allCaps);
+        // eslint-disable-next-line
+        assert.deepEqual(result, ["HOW", "ARE", "YOU", "TODAY"]);
     });
 
     it('findIndex', () => {
