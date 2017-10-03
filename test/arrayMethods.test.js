@@ -41,12 +41,20 @@ describe('array methods', () => {
         assert.equal(result, 7);
     });
 
-    it('filter', () => {
+    it('filter - array holes', () => {
         // eslint-disable-next-line
         let array = [1, 2, 3, , 4];
         let isOdd = arrayElement => arrayElement%2 != 0;
         let result = filter(array, isOdd);
         assert.deepEqual(result, [1, 3]);
+    });
+
+    it('filter - passing index into callback', () => {
+        // eslint-disable-next-line
+        let array = [0, 'bob', 2, , 4];
+        let isEqualToIndex = (arrayElement, index) => arrayElement === index;
+        let result = filter(array, isEqualToIndex);
+        assert.deepEqual(result, [0, 2, 4]);
     });
 
     it('map', () => {
