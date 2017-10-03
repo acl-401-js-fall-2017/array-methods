@@ -36,6 +36,14 @@ describe('array methods', () => {
         // eslint-disable-next-line
         let array = [1, 2, , 3];
         let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
+        let result = reduce(array, addToAccumulator);
+        assert.equal(result, 6);
+    });
+
+    it('reduce - basic addition with array holes and initialValue', () => {
+        // eslint-disable-next-line
+        let array = [1, 2, , 3];
+        let addToAccumulator = (accumulator, arrayElement) => accumulator += arrayElement;
         let initialValue = 1;
         let result = reduce(array, addToAccumulator, initialValue);
         assert.equal(result, 7);
