@@ -35,6 +35,15 @@ describe ('reduce', function() {
 
         assert.deepEqual(accum,22);
     });
+
+    it('should return the accumulator value starting with the different init index ', function(){
+        let accum =  arrayMethods.reduce(testArray,(accumulator, value) => {
+            return accumulator + value;
+        }, 20);
+
+        assert.deepEqual(accum,42);
+    });
+    
 });
 
 
