@@ -1,0 +1,23 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrayTests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristinaMills/array-methods.git"
+  },
+  "keywords": [],
+  "author": "Christina Mills <chrimills@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristinaMills/array-methods/issues"
+  },
+  "homepage": "https://github.com/ChristinaMills/array-methods#readme",
+  "devDependencies": {
+    "mocha": "^4.0.0"
+  }
+}
