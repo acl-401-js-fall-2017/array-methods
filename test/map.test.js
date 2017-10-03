@@ -15,6 +15,8 @@ describe('map function', () => {
         const mappedArray = map(originalArray, (num, index) => {
             return num * index;
         });
-        assert.deepEqual(mappedArray, [0, 2, 9, 16]);
+        assert.deepEqual(mappedArray, [0, 2, , 9, 16]);
     });
+
+
 });
