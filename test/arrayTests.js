@@ -2,6 +2,8 @@ const assert = require('assert');
 const map = require('../lib/map');
 const filter = require('../lib/filter');
 const indexFinder = require('../lib/indexFinder')
+const every = require('../lib/every')
+const reduce = require('../lib/reduce')
 
 describe('map', () => {
     it('makes new array with result of calling fnctn every element', () => {
@@ -33,9 +35,24 @@ describe('indexFinder', () => {
 
 });
 
+
 describe('every', () => {
-    const testArr = [1, 2, 3, 4, 5, 6];
-    it('it returns a boolean if all elements pass the condition', () => {
-        assert.deepEqual('false')
+    const arr = [2, 4, 6];
+    const cond = every(arr, (item) => item % 2 == 0);
+    it('returns true if all elements pass callback condition', () => {
+        assert.deepEqual(cond, true);
     })
+});
+
+
+describe('reduce', () => {
+    it('reduces an array to one number value', () => {
+        const array = [1, 2, 3];
+        const cond = reduce(array, (sum, ele, index) => {
+            return sum += ele; 
+        })
+
+        assert(cond, 3);
+    })
+          
 });
