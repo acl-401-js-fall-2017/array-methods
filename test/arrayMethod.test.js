@@ -20,7 +20,7 @@ describe('array methods', () => {
 
     it('map', () => {
         const array = [2, 3, 6];
-        const mapArray = map(array, (num, index) => {
+        const mapArray = map(array, (num) => {
             return num * num;
         });
         assert.deepEqual(mapArray, [4, 9, 36]);
@@ -28,7 +28,7 @@ describe('array methods', () => {
 
     it('filter', () => {
         const array = [2, 5, 8];
-        const filterArray = filter(array, (num, index) => {
+        const filterArray = filter(array, (num) => {
             return num % 2 === 0;
         });
         assert.deepEqual(filterArray, [2, 8]);
@@ -36,7 +36,7 @@ describe('array methods', () => {
 
     it('findIndex', () => {  
         let array = [3, 7, 11];
-        let findIndexNum = findIndex(array, (num, index) => {
+        let findIndexNum = findIndex(array, (num) => {
             return num === 11;
         });
         assert.deepEqual(findIndexNum, 2);
@@ -44,7 +44,7 @@ describe('array methods', () => {
 
     it('findIndexIfNotInArray', () => {
         let array = [0, 5, 121];
-        let findIndexNum = findIndex(array, (num, index) => {
+        let findIndexNum = findIndex(array, (num) => {
             return num === 13;
         });
         assert.deepEqual(findIndexNum, -1);
@@ -52,7 +52,7 @@ describe('array methods', () => {
 
     it('everyIfTrue', () => {
         let array = [5, 6, 7];
-        let everyArray = every(array, (num, index) => {
+        let everyArray = every(array, (num) => {
             return num > 0;
         });
         assert.deepEqual(everyArray, true);
@@ -60,7 +60,7 @@ describe('array methods', () => {
 
     it('everyIfFalse', () => {
         let array = [5, 6, 7];
-        let everyArray = every(array, (num, index) => {
+        let everyArray = every(array, (num) => {
             return num > 100;
         });
         assert.deepEqual(everyArray, false);
