@@ -66,13 +66,13 @@ describe('array methods', () => {
         assert.deepEqual(everyArray, false);
     });
 
-    // it.only('reduce', () => {
-    //     let array = [10, 14, 18];
-    //     let reduceArray = reduce(array, (total, initialValue) => {
-    //         return total + initialValue;
-    //     });
-    //     assert.deepEqual(reduceArray, 42);
-    // })
+    it('reduce', () => {
+        let array = [10, 14, 18, 30];
+        let reduceArray = reduce(array, (total, initialValue) => {
+            return total + initialValue;
+        });
+        assert.deepEqual(reduceArray, 72);
+    });
 
 });
 
