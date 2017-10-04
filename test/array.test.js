@@ -33,7 +33,7 @@ describe('array methods', () => {
     it('map3', () => {
         const arr = [1,2,3];
         assert.deepEqual(map(arr, (num) => {
-            let numString = `${num}`
+            let numString = `${num}`;
             return numString;
         }),['1','2','3']);
     });
@@ -56,7 +56,7 @@ describe('array methods', () => {
         const arr = [1,2,3,51,4,365];
         assert.deepEqual(filter(arr, function isLargerThan50(num){
             if(num > 50){
-                return true
+                return true;
             }
         }),[51,365]);
     });
@@ -71,7 +71,7 @@ describe('array methods', () => {
     it('reduce2', () => {
         const arr = [1,2,3];
         assert.deepEqual(reduce(arr, function concat(a, b){
-            var result = `${b}${a}`
+            var result = `${b}${a}`;
             return result;
         },''),'123');
     });
@@ -100,7 +100,7 @@ describe('array methods', () => {
     it('findIndex3', () => {
         const arr = [1,3,3,3,6,'string',8,99,3];
         assert.deepEqual(findIndex(arr, function isString(item){
-            let type = typeof item 
+            let type = typeof item; 
             return type === 'string';
         }),5);
     });
@@ -122,7 +122,7 @@ describe('array methods', () => {
     it('every3', () => {
         const arr = ['1','3','3','3','7','string','3'];
         assert.deepEqual(every(arr, function isOdd(item){
-            let type = typeof item 
+            let type = typeof item; 
             return type === 'string';
         }),true);
     });
