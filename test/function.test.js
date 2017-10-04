@@ -52,4 +52,13 @@ describe('Array Methods', () => {
             assert.deepEqual(everyResult, true);
         });
     });
+    describe('reduce function', () => {
+        it('should return the sum of the array', () => {
+            const array = [1, 2, 3];
+            let reduceResult = reduce(array, (x, y) => {
+                return x + y;
+            });
+            assert.deepEqual(reduceResult, 6);
+        });
+    });
 });
