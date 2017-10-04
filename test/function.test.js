@@ -30,7 +30,7 @@ describe('Array Methods', () => {
     describe('findIndex function', () => {
         it('should return the index of the first value of an even number', () => {
             const array = [1, 1, 3, 4, 5];
-            let findIndexVal = findIndex(array, (x) =>  {
+            let findIndexVal = findIndex(array, (x) => {
                 let modulo = x % 2;
                 return modulo === 0;
             });
@@ -38,7 +38,7 @@ describe('Array Methods', () => {
         });
         it('should return the index of the first value of an odd number', () => {
             const array = [2, 4, 45, 4, 5];
-            let findIndexVal = findIndex(array, (x) =>  {
+            let findIndexVal = findIndex(array, (x) => {
                 let modulo = x % 2;
                 return modulo === 1;
             });
@@ -48,17 +48,20 @@ describe('Array Methods', () => {
     describe('every function', () => {
         it('should return true if all integers are greater than 2', () => {
             const array = [3, 4, 5];
-            let everyResult = every(array, x => x > 2 ? true : false); 
+            let everyResult = every(array, x => x > 2 ? true : false);
             assert.deepEqual(everyResult, true);
         });
     });
-    describe.skip('reduce function', () => {
+    describe('reduce function', () => {
         it('should return the sum of the array', () => {
             const array = [1, 2, 3];
-            let reduceResult = reduce(array, (x, y) => {
-                return x + y;
-            });
+
+            function accumulate(accumulator, x) {
+                return accumulator + x;
+            }
+            const reduceResult = reduce(array, accumulate);
             assert.deepEqual(reduceResult, 6);
         });
+        
     });
 });
