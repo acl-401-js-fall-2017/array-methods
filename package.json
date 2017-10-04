@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test",
     "start": "npm test -- -w"
   },
   "repository": {
-    "type": "git",
+    "type": "git",  
     "url": "git+https://github.com/mirrorapps/array-methods.git"
   },
   "author": "Eli Speigel <eli.speigel@gmail.com>",
