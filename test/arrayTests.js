@@ -26,9 +26,16 @@ describe('filter', () => {
 describe('indexFinder', () => {
     const testArr = [1, 3, 2, 4];
     const cond = indexFinder(testArr, (item) => item = 3);
-    it.only('returns index of first element that passes condition', () => {
+    it('returns index of first element that passes condition', () => {
 
         assert.deepEqual(cond, 1);
     })
 
+});
+
+describe('every', () => {
+    const testArr = [1, 2, 3, 4, 5, 6];
+    it('it returns a boolean if all elements pass the condition', () => {
+        assert.deepEqual('false')
+    })
 });
