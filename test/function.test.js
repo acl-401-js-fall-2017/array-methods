@@ -3,6 +3,7 @@ const map = require('../lib/map');
 const filter = require('../lib/filter');
 const findIndex = require('../lib/findIndex');
 const every = require('../lib/every');
+const reduce = require('../lib/reduce');
 
 describe('Array Methods', () => {
     describe('map function', () => {
@@ -47,12 +48,11 @@ describe('Array Methods', () => {
     describe('every function', () => {
         it('should return true if all integers are greater than 2', () => {
             const array = [3, 4, 5];
-            let everyResult = every(array, x => x > 2 ? false : true); 
-            //no idea why this works vs true : false, which makes more sense
+            let everyResult = every(array, x => x > 2 ? true : false); 
             assert.deepEqual(everyResult, true);
         });
     });
-    describe('reduce function', () => {
+    describe.skip('reduce function', () => {
         it('should return the sum of the array', () => {
             const array = [1, 2, 3];
             let reduceResult = reduce(array, (x, y) => {
