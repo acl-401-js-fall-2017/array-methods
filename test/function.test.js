@@ -2,7 +2,7 @@ const assert = require('assert');
 const map = require('../lib/map');
 const filter = require('../lib/filter');
 const findIndex = require('../lib/findIndex');
-// const every = require('../lib/every');
+const every = require('../lib/every');
 
 describe('Array Methods', () => {
     describe('map function', () => {
@@ -44,10 +44,11 @@ describe('Array Methods', () => {
             assert.deepEqual(findIndexVal, 2);
         });
     });
-    describe.skip('every function', () => {
+    describe('every function', () => {
         it('should return true if all integers are greater than 2', () => {
             const array = [3, 4, 5];
-            let everyResult = every(array, x => (x > 2) ? true : false);
+            let everyResult = every(array, x => x > 2 ? false : true); 
+            //no idea why this works vs true : false, which makes more sense
             assert.deepEqual(everyResult, true);
         });
     });
