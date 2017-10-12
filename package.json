@@ -1,0 +1,25 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "mon run test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdemkoral/array-methods.git"
+  },
+  "author": "Erdem Koral",
+  "email": "koral.erdem@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erdemkoral/array-methods/issues"
+  },
+  "homepage": "https://github.com/erdemkoral/array-methods#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "mocha": "^4.0.0"
+  }
+}
