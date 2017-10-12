@@ -1,0 +1,24 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martsyalis/array-methods.git"
+  },
+  "author": "Maryus Martsyalis <martsyalis@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Martsyalis/array-methods/issues"
+  },
+  "homepage": "https://github.com/Martsyalis/array-methods#readme",
+  "devDependencies": {
+    "lint": "^1.1.2",
+    "mocha": "^4.0.0"
+  },
+  "dependencies": {},
+  "description": ""
+}
