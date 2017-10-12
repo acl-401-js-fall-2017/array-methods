@@ -1,0 +1,27 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.5.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robnit/array-methods.git"
+  },
+  "author": "Robin Miller <rmillerpdx@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robnit/array-methods/issues"
+  },
+  "homepage": "https://github.com/robnit/array-methods#readme"
+}
