@@ -1,0 +1,27 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "This is a project that attempts to explain  array methods",
+  "main": "test.js",
+  "dependencies": {
+    "eslint": "^4.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "mocha": "^4.0.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "npm run test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABodey/array-methods.git"
+  },
+  "author": "Andrew <A.s.bodey@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ABodey/array-methods/issues"
+  },
+  "homepage": "https://github.com/ABodey/array-methods#readme"
+}
