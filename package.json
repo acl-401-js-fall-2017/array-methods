@@ -1,0 +1,24 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "npm test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirrorapps/array-methods.git"
+  },
+  "author": "Eli Speigel <eli.speigel@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirrorapps/array-methods/issues"
+  },
+  "homepage": "https://github.com/mirrorapps/array-methods#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "mocha": "^3.5.3"
+  }
+}
