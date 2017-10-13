@@ -1,0 +1,26 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "Array Methods using TDD!",
+  "main": "index.js",
+  "scripts": {
+    "lint": "lint",
+    "pretest": "eslint .",
+    "test": "mocha",
+    "start": "npm run test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zac-L/array-methods.git"
+  },
+  "author": "Zachary Lichens <zacharylichens@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zac-L/array-methods/issues"
+  },
+  "homepage": "https://github.com/Zac-L/array-methods#readme",
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "mocha": "^3.5.3"
+  }
+}
